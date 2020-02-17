@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class PetOwner {
     String ownerName = "";
     Pet[] petOwned;
-    int numofpet = 0;
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
@@ -22,15 +21,26 @@ public class PetOwner {
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
-        numofpet++;
-        petOwned[numofpet] = pet;
+        /*if(this.petOwned.length == 1){
+            if(petOwned[0].equals(null)){
+                petOwned[0] = pet;
+            }
+        }else {
+            this.petOwned[this.petOwned.length+1] = pet;
+        }*/
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-        petOwned[0] = null;
+        for(int x = 0; x <= petOwned.length -1; x++){
+            if(petOwned[x].equals(pet)){
+                petOwned[x] = null;
+                break;
+            }
+        }
+        //petOwned[0] = null;
     }
 
     /**

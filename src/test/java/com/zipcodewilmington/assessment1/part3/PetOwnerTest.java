@@ -45,6 +45,7 @@ public class PetOwnerTest {
         // Given
         Pet newPet = new Dog();
         PetOwner po = new PetOwner("", null);
+        newPet.setOwner(po);
 
         // When
         po.addPet(newPet);
