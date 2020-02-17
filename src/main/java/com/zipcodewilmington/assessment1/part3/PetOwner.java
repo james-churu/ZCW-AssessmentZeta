@@ -37,7 +37,7 @@ public class PetOwner {
         for(int x = 0; x <= petOwned.length -1; x++){
             if(petOwned[x].equals(pet)){
                 petOwned[x] = null;
-                break;
+                break;  
             }
         }
         //petOwned[0] = null;
